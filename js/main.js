@@ -33,7 +33,7 @@ const deudores = [
     deudor1, deudor2, deudor3, deudor4, deudor5, deudor6, deudor7, deudor8, deudor9, deudor10
 ]
 
-
+alert("BIENVENIDO AL SIMULADOR DE DEUDORES DE NUESTRA EMPRESA, PARA UNA CORRECTA ATENCION, SIGA LOS PASOS COMO SE INDICAN")
 let opcion = prompt("¿Desea ver lista de Deudores? Responder SI/NO")
 if (opcion == "SI") {
     console.log("LISTA DE DEUDORES")
