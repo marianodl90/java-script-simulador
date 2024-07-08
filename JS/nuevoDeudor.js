@@ -73,9 +73,9 @@ function agregarEventoEliminarDeudor() {
             localStorage.setItem("listaNuevaDA", JSON.stringify(listaDAStorage)) 
             renderizarDeudorNuevo(listaDAStorage) 
     })
+})
 }
-
-renderizarDeudorNuevo(listaDAStorage);
+renderizarDeudorNuevo(listaDAStorage)
 
 
 
