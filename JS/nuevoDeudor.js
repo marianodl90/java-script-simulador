@@ -14,13 +14,23 @@ function agregarNuevoDeudor (id ,nombre, apellido, montoAdeudado){
     }
     
     listaND.push(nuevoDeudor)
-
-    renderizarNuevosDeudores(listaND)
+    localStorage.setItem("listaNuevaDA", JSON.stringify(listaND))
+    
 
 }
 
-agregarNuevoDeudor(13, "Mariano", "Troncoso", 45000)
-agregarNuevoDeudor(15, "Nestor", "Martin", 45000)
+agregarNuevoDeudor(18, "Mariano", "Valverde", 45000)
+agregarNuevoDeudor(18, "Resilento", "hcobar", 45000)
+agregarNuevoDeudor(18, "Pepe", "Pinesco", 45000)
+
+
+
+function limpiarLista() {
+    listaND = []
+    localStorage.setItem("listaNuevaDA", JSON.stringify(listaND))
+    nuevaListaDAContainer.innerHTML = ""
+}
+
 
 
 function renderizarNuevosDeudores (arrayDN){
@@ -39,8 +49,14 @@ function renderizarNuevosDeudores (arrayDN){
 
 }
 
-renderizarNuevosDeudores(listaND)
-    
+document.addEventListener("DOMContentLoaded", function() {
+    if (listaDAStorage.length > 0) {
+        listaND = listaDAStorage; 
+        renderizarNuevosDeudores(listaND);
+    }
+});
+
+
 
  
 
