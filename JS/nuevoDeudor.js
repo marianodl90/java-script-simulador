@@ -3,6 +3,8 @@ let listaDAStorage = JSON.parse(localStorage.getItem("listaNuevaDA")) || []
 
 const nuevaListaDAContainer = document.getElementById("nuevoDeudor-container")
 
+let listaND = []
+
 function agregarNuevoDeudor (id ,nombre, apellido, montoAdeudado){
     const nuevoDeudor = {
     id: id,
@@ -11,76 +13,35 @@ function agregarNuevoDeudor (id ,nombre, apellido, montoAdeudado){
     montoAdeudado: montoAdeudado
     }
     
-    listaDAStorage.push(nuevoDeudor)
+    listaND.push(nuevoDeudor)
 
-    // Actualizamos el localStorage
-    localStorage.setItem("listaNuevaDA", JSON.stringify(listaDAStorage))
+    renderizarNuevosDeudores(listaND)
 
-    // Llamamos a la función renderizarDeudorNuevo con toda la lista actualizada
-    renderizarDeudorNuevo(listaDAStorage)
 }
 
-function renderizarDeudorNuevo (deudores){
+agregarNuevoDeudor(13, "Mariano", "Troncoso", 45000)
+agregarNuevoDeudor(15, "Nestor", "Martin", 45000)
 
-    // Limpiamos el contenedor 
-    nuevaListaDAContainer.innerHTML = ''
 
-    deudores.forEach((deudorAg, index) => {
-       const  card = document.createElement("div")
-        card.innerHTML = `
-                        <div>
-                        <label>Id</label><br>
-                        <input type="number" value="${deudorAg.id}" disabled>
-                        </div>
-                        <div>
-                        <label>Nombre</label><br>
-                        <input type="text" value="${deudorAg.nombre}" disabled>
-                        </div>
-                        <div>
-                        <label>Apellido</label><br>
-                        <input type="text" value="${deudorAg.apellido}" disabled>
-                        </div>
-                        <div>
-                        <label>Monto Adeudado</label><br>
-                        <input type="text" value="${deudorAg.montoAdeudado}" disabled>
-                        </div>
-                        <button class="agregarDeudor" onclick="agregarADeudores(${index})">AGREGAR</button>
-                        `
-    nuevaListaDAContainer.appendChild(card) 
-    })
-    agregarEventoEliminarDeudor()
+function renderizarNuevosDeudores (arrayDN){
+    
+    arrayDN.forEach(deudorN => {
+        const card = document.createElement("div")
+    card.innerHTML = `
+                         <h3>${deudorN.id}</h3>                    
+                         <h3>${deudorN.nombre}</h3>
+                         <h3>${deudorN.apellido}</h3>
+                         <h3>${deudorN.montoAdeudado}</h3><br>
+                         `
+
+    nuevaListaDAContainer.appendChild(card)
+    });
+
 }
 
-function limpiarLista() {
-    // Limpiamos visualización en el HTML
-    nuevaListaDAContainer.innerHTML = ''
+renderizarNuevosDeudores(listaND)
+    
 
-    // Vaciamos el arreglo de deudores nuevos
-    listaDAStorage = []
-
-    // Actualizamos el localStorage
-    localStorage.setItem("listaNuevaDA", JSON.stringify(listaDAStorage))
-
-    console.log("Lista de deudores nuevos limpiada.")
-}
-
-function agregarEventoEliminarDeudor() {
-    const botonesEliminar = document.querySelectorAll(".eliminarDeudorNuevo")
-    botonesEliminar.forEach(boton => {
-        boton.addEventListener("click", function() {
-            const index = boton.id;
-            listaDAStorage.splice(index, 1) 
-            localStorage.setItem("listaNuevaDA", JSON.stringify(listaDAStorage)) 
-            renderizarDeudorNuevo(listaDAStorage) 
-    })
-})
-}
-renderizarDeudorNuevo(listaDAStorage)
-
-
-
-
-
-
+ 
 
 
