@@ -11,15 +11,42 @@
 .contenedor-principal h1{
     color: blue;
 }
-#deudoresA-container{
+#contenedor-principal{
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 700px;
-    height: 1800px;
+    height: 100%;
     border-radius: 10px;
-    background-color: lightskyblue;
+}
+#contenedor-principal h2 a{
+    background-color: blue;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 100px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+#contenedor-principal h1 {
+    background-color: blue;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 100px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+#clientes-container{
+    height: 100%;
 }
 #titulo-a{
     background-color: blue;
@@ -48,6 +75,25 @@
 #titulo-b h2 a{
     color: aliceblue;
     text-decoration: none;
+}
+#volver{
+    background-color: blue;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 100px;
+    border-radius: 10px;
+    
+   
+}
+#volver a{
+    color: whitesmoke;
+    text-decoration: none;
+    
+   
 }
 #deudores-container{
     background-color: lightskyblue;
