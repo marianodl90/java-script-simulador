@@ -1,0 +1,13 @@
+[
+    { "id": 1, "nombre": "Mariano", "apellido": "Moreno", "montoAdeudado": 25000 },
+    { "id": 2, "nombre": "Sebastian", "apellido": "Yatra", "montoAdeudado": 0 },
+    { "id": 3, "nombre": "Belen", "apellido": "de Luis", "montoAdeudado": 10000 },
+    { "id": 4, "nombre": "Pablo", "apellido": "Rivas", "montoAdeudado": 15000 },
+    { "id": 5, "nombre": "Esteban", "apellido": "Chiche", "montoAdeudado": 5000 },
+    { "id": 6, "nombre": "Maluma", "apellido": "Baby", "montoAdeudado": 250000 },
+    { "id": 7, "nombre": "Horacio", "apellido": "Larreta", "montoAdeudado": 0 },
+    { "id": 8, "nombre": "Roberto", "apellido": "Funes", "montoAdeudado": 2500 },
+    { "id": 9, "nombre": "Alfredo", "apellido": "Casero", "montoAdeudado": 0 },
+    { "id": 10, "nombre": "Norberto", "apellido": "Mimio", "montoAdeudado": 225000 }
+]
+
