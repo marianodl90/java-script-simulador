@@ -31,7 +31,7 @@ function agregarListaDeudores(data) {
                     listaDeudores.push(clienteSeleccionado)
                     console.log(listaDeudores)
                     localStorage.setItem("listaD", JSON.stringify(listaDeudores))
-                    renderizarDeudores(listaDeudores);
+                    renderizarDeudores(listaDeudores)
                 } else {
                     console.log("El cliente ya está en la lista de deudores.")
                 }

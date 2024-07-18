@@ -1,12 +1,21 @@
-.contenedor-principal{
+#contenedor-principal-clientes{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 700px;
-    height: 600px;
+    width: 100%;
+    height: 100%;
     background-color: lightskyblue;
     border-radius: 10px;
+}
+#clientes-js{
+    display: flex;
+    
+}
+.cl{
+display: flex;
+align-items: center;
+flex-direction: column;
 }
 .contenedor-principal h1{
     color: blue;
