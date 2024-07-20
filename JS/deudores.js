@@ -52,3 +52,9 @@ function montoTotalDeuda (arrayDeudores){
 }
 montoTotalDeuda(listaDeudores)
 
+Swal.fire({
+    title: 'Alerta!',
+    text: 'Si elimina un deudor de la lista debera actualizar la pagina para ver el monto de deuda actualizado',
+    icon: 'warning',
+    confirmButtonText: 'Entendido'
+  })
