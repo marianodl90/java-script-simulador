@@ -16,7 +16,8 @@ const obtenerUsuarios = async () => {
                            <h3>ID: ${usuario.id}</h3><br>`
                            
                            
-        });
+        })
+        renderizado += `<h2>El total de clientes nuevos es: ${respuesta.length}</h2>`
         
     } catch (error) {
         console.log("error detectado")
@@ -28,3 +29,6 @@ const obtenerUsuarios = async () => {
 }
 
 obtenerUsuarios()
+
+
+

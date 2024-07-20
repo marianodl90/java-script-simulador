@@ -18,6 +18,10 @@ fetch("../baseDatos/data.JSON")
             clientesContainer.appendChild(card)
         })
         agregarListaDeudores(data)
+
+        totalClientes(data)
+
+
     } catch (error) {
         console.error('Error al procesar los datos:', error)
     }
@@ -52,7 +56,21 @@ function agregarListaDeudores(data) {
     });
 }
 
+/*
+function totalClientes (arrayClientes){
+    let total = arrayClientes.reduce((contador, cliente) => contador + cliente, 0)
+    
+    console.log("El total de clientes es de " + total)
+    const card2 = document.createElement("div")
+    card2.innerHTML = `
+                    <h2>El total de clientes es de  ${total.lenght}</h2>`
 
+                    clientesContainer.appendChild(card2)
+
+}
+
+
+*/
 
 
 

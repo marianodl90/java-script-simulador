@@ -41,7 +41,8 @@ renderizarDeudores(listaDeudores)
 
 function montoTotalDeuda (arrayDeudores){
     let total = arrayDeudores.reduce((contador, deudor) => contador + deudor.montoAdeudado, 0)
-    //console.log("El monto total de la deuda asciende a $" + total)
+    
+    console.log("El monto total de la deuda asciende a $" + total)
     const card2 = document.createElement("div")
     card2.innerHTML = `
                     <h2>El monto total de la deuda asciende a ${total} pesos</h2>`
