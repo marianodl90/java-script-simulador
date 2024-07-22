@@ -1,3 +1,4 @@
+
 const clientesContainer = document.getElementById("clientes-container")
 
 fetch("../baseDatos/data.JSON")
@@ -19,7 +20,7 @@ fetch("../baseDatos/data.JSON")
         })
         agregarListaDeudores(data)
 
-        totalClientes(data)
+        //totalClientes(data)
 
 
     } catch (error) {
@@ -46,14 +47,29 @@ function agregarListaDeudores(data) {
                     console.log(listaDeudores)
                     localStorage.setItem("listaD", JSON.stringify(listaDeudores))
                     renderizarDeudores(listaDeudores)
+
                 } else {
                     console.log("El cliente ya está en la lista de deudores.")
+                    Toastify({
+                        text: "El Cliente Ya esta agregado a lista de Deudores",
+                        duration: 1500,
+                        close: false,
+                        gravity: "top",
+                        position: "left",
+                        stopOnFocus: true,
+                        style: {
+                            background: "linear-gradient(to right, #00b09b, #96c93d)",
+                        },
+                        onClick: function(){} 
+                    })
+                    .showToast()
                 }
             } else {
                 console.log("Cliente no encontrado.")
+                
             }
-        });
-    });
+        })
+    })
 }
 
 /*
@@ -68,9 +84,9 @@ function totalClientes (arrayClientes){
                     clientesContainer.appendChild(card2)
 
 }
-
-
 */
+
+
 
 
 
