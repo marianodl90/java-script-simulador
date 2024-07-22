@@ -4,7 +4,6 @@ nuevaListaDeudores = JSON.parse(nuevaListaDeudores) || []
 const nuevosDeudoresContenedor = document.getElementById("nuevosDeudores-contenedor")
 
 function renderizarDeudores(arrayD) {
-    deudoresContenedor.innerHTML = ''
 
     arrayD.forEach(deudorN => {
         const card = document.createElement("div")

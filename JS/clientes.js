@@ -4,6 +4,7 @@ const clientesContainer = document.getElementById("clientes-container")
 fetch("../baseDatos/data.JSON")
 .then(respuesta => respuesta.json())
 
+
 .then(data => {
     try {
         data.forEach(cliente => {
@@ -20,7 +21,8 @@ fetch("../baseDatos/data.JSON")
         })
         agregarListaDeudores(data)
 
-        //totalClientes(data)
+        
+        totalClientes(data)
 
 
     } catch (error) {
@@ -72,19 +74,19 @@ function agregarListaDeudores(data) {
     })
 }
 
-/*
+
 function totalClientes (arrayClientes){
-    let total = arrayClientes.reduce((contador, cliente) => contador + cliente, 0)
+    let total = arrayClientes.length
     
     console.log("El total de clientes es de " + total)
     const card2 = document.createElement("div")
     card2.innerHTML = `
-                    <h2>El total de clientes es de  ${total.lenght}</h2>`
+                    <h2>El total de clientes es de  ${total}</h2>`
 
                     clientesContainer.appendChild(card2)
 
 }
-*/
+
 
 
 
