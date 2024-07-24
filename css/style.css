@@ -18,16 +18,18 @@ body {
     margin-top: 0;
 }
 
-.contenedor-principal h1 {
-    color: lightyellow;
-    font-weight: 800;
-    font-size: 80px;
+#titulo-index{
+    width: 1200px;
+    height: 80px;
     display: flex;
     justify-content: center;
-}
-.contenedor-principal h2 a:hover{
-    text-decoration: underline;
+    align-items: center;
     
+}
+#titulo-index h1{
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-size: 80px;
 }
 
 .contenedor-principal a {
@@ -38,7 +40,23 @@ body {
     justify-content: center;
     text-decoration: none;
 }
-
+#contenedor-link-i{
+    width: 900px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    background-color: #af6b36;
+    align-items: center;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+}
+#contenedor-link-i h2 a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+#contenedor-link-i:hover{
+    cursor: pointer;
+}
 /************** CLIENTES *************/
 
 #contenedor-clientes {
