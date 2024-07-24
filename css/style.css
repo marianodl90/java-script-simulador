@@ -1,1 +1,308 @@
+/********** Index *************/
+body {
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+}
 
+.contenedor-principal {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../multimedia/empresas-de-electricidad-baratas-en-Valencia-casco.jpg);
+    background-size: cover;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1200px;
+    margin-top: 0;
+}
+
+.contenedor-principal h1 {
+    color: lightyellow;
+    font-weight: 800;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+}
+.contenedor-principal h2 a:hover{
+    text-decoration: underline;
+    
+}
+
+.contenedor-principal a {
+    color: lightyellow;
+    font-weight: 800;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+/************** CLIENTES *************/
+
+#contenedor-clientes {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url(../multimedia/empresas-de-electricidad-baratas-en-Valencia-casco.jpg);
+    background-size: cover;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 0;
+}
+
+#clientes-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+#clientes-container div {
+    width: 900px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+}
+
+#clientes-container div h3 {
+    display: flex;
+    color: whitesmoke;
+}
+
+#clientes-container div button {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: black;
+    border-radius: 5px;
+}
+
+#clientes-container div button:hover {
+    background-color: #af6b36;
+    cursor: pointer;
+    color: whitesmoke;
+    font-weight: 700;
+}
+
+#clientes-container div h2 {
+    display: flex;
+    color: whitesmoke;
+}
+
+#clientes-container #uno:hover {
+    background-color: #af6b36;
+    color: whitesmoke;
+    font-weight: 700;
+}
+#titulo-cliente{
+    width: 900px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+#titulo-cliente h2{
+ color: whitesmoke;
+ text-transform: uppercase;
+}
+#contenedor-link{
+    width: 900px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+}
+.link-cliente {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid whitesmoke;
+    width: 900px;
+    height: 80px;
+}
+.link-cliente h2 {
+    color: whitesmoke;
+    text-decoration: none;
+}
+.link-cliente h2 a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+.link-cliente:hover{
+    background-color: #af6b36;
+    text-decoration: none;
+}
+
+/********** DEUDORES ************/
+
+#contenedor-deudores {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url(../multimedia/empresas-de-electricidad-baratas-en-Valencia-casco.jpg);
+    background-size: cover;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1200px;
+    margin-top: 0;
+    padding-top: 30px;
+}
+#deudores-contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#deudores-contenedor div {
+    width: 900px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+}
+
+#deudores-contenedor div h3 {
+    display: flex;
+    color: whitesmoke;
+}
+
+#deudores-contenedor div button {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: black;
+    border-radius: 5px;
+}
+
+#deudores-contenedor div button:hover {
+    background-color: #af6b36;
+    cursor: pointer;
+    color: whitesmoke;
+    font-weight: 700;
+}
+#titulo-deudores{
+    width: 900px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+#titulo-deudores h2{
+    color: whitesmoke;
+    text-transform: uppercase;
+}
+#deudores-contenedor div h2 {
+    display: flex;
+    color: whitesmoke;
+}
+#deudores-contenedor #dos:hover {
+    background-color: #af6b36;
+}
+#contenedor-link-d{
+    width: 900px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+}
+#contenedor-link-d h2 a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+#contenedor-link-d:hover{
+    background-color: #af6b36;
+    cursor: pointer;
+}
+
+/*********** NUEVOS CLIENTES ***************/
+
+
+#contenedor-clientesNuevos {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url(../multimedia/empresas-de-electricidad-baratas-en-Valencia-casco.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 0;
+    padding-top: 30px;
+}
+#nuevosClientes-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#nuevosClientes-container div {
+    width: 900px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+}
+#nuevosClientes-container div h2 {
+    display: flex;
+    color: whitesmoke;
+}
+#titulo-nuevosClientes{
+    width: 900px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+#titulo-nuevosClientes h1{
+    color: whitesmoke;
+    text-transform: uppercase;
+}
+#tres:hover{
+    background-color: #af6b36;
+}
+#contenedor-link-nc{
+    width: 900px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+}
+#contenedor-link-nc h2 a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+#contenedor-link-nc:hover{
+    background-color: #af6b36;
+    cursor: pointer;
+}

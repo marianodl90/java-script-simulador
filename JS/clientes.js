@@ -1,37 +1,48 @@
 
 const clientesContainer = document.getElementById("clientes-container")
 
+
+
+
 fetch("../baseDatos/data.JSON")
-.then(respuesta => respuesta.json())
+    .then(respuesta => respuesta.json())
 
 
-.then(data => {
-    try {
-        data.forEach(cliente => {
-            const card = document.createElement("div")
-            card.innerHTML = `
+    .then(data => {
+        try {
+            data.forEach(cliente => {
+                const card = document.createElement("div")
+                card.innerHTML = `
+                
+                <div>
                 <h3>Nombre: ${cliente.nombre}</h3>
+                </div>
+                <div>
                 <h3>Apellido: ${cliente.apellido}</h3>
-                <h3>Monto Adeudado: ${cliente.montoAdeudado}</h3>
-                <h3>ID: ${cliente.id}</h3>
+                </div>
+                <div>
+                <h3>Monto Adeudado: $${cliente.montoAdeudado}</h3>
+                </div>
+                <div>
                 <button class="agregarDeudor" data-id="${cliente.id}">Agregar a LISTA DE DEUDORES</button>
+                </div>
                 <br><br>
             `
-            clientesContainer.appendChild(card)
-        })
-        agregarListaDeudores(data)
-
-        
-        totalClientes(data)
+                clientesContainer.appendChild(card)
+            })
+            agregarListaDeudores(data)
 
 
-    } catch (error) {
-        console.error('Error al procesar los datos:', error)
-    }
-})
-.catch(error => {
-    console.error('Error en la petición fetch:', error)
-})
+            totalClientes(data)
+
+
+        } catch (error) {
+            console.error('Error al procesar los datos:', error)
+        }
+    })
+    .catch(error => {
+        console.error('Error en la petición fetch:', error)
+    })
 
 
 let listaDeudores = []
@@ -62,28 +73,29 @@ function agregarListaDeudores(data) {
                         style: {
                             background: "linear-gradient(to right, #00b09b, #96c93d)",
                         },
-                        onClick: function(){} 
+                        onClick: function () { }
                     })
-                    .showToast()
+                        .showToast()
                 }
             } else {
                 console.log("Cliente no encontrado.")
-                
+
             }
         })
     })
 }
 
 
-function totalClientes (arrayClientes){
+function totalClientes(arrayClientes) {
     let total = arrayClientes.length
-    
+
     console.log("El total de clientes es de " + total)
     const card2 = document.createElement("div")
     card2.innerHTML = `
-                    <h2>El total de clientes es de  ${total}</h2>`
-
-                    clientesContainer.appendChild(card2)
+                    <div id="uno">
+                    <h2>Total de clientes: ${total}</h2>
+                    </div>`
+    clientesContainer.appendChild(card2)
 
 }
 

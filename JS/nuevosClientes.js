@@ -1,34 +1,46 @@
 
+const clientesNContainer = document.getElementById("nuevosClientes-container")
 
 const obtenerUsuarios = async () => {
-    let URL = ("https://jsonplaceholder.typicode.com/users")
-    const usuarioError = "<span> No se pueden cargar los usuarios, intente mas tarde"
-    let renderizado =``
+    let URL = "https://jsonplaceholder.typicode.com/users"
 
     try {
         let solicitud = await fetch(URL)
         let respuesta = await solicitud.json()
 
+        clientesNContainer.innerHTML = ""
+
         respuesta.forEach(usuario => {
-          
-            renderizado += `<h2>Nombre: ${usuario.name}</h2>
-                           <h3>Apellido: ${usuario.username}</h3>
-                           <h3>ID: ${usuario.id}</h3><br>`
-                           
-                           
-        })
-        renderizado += `<h2>El total de clientes nuevos es: ${respuesta.length}</h2>`
-        
+            const card = document.createElement("div")
+            card.innerHTML = `
+            <div>
+            <h2>Nombre: ${usuario.name}</h2>
+            </div>
+            <div>
+            <h2>Apellido: ${usuario.username}</h2>
+            </div>
+                <br>`
+            clientesNContainer.appendChild(card)
+        });
+
+        const totalClientes = document.createElement("div")
+        totalClientes.innerHTML = `
+        <div id="tres">
+        <h2>TOTAL DE CLIENTES NUEVOS: ${respuesta.length}</h2>
+        </div>`
+        clientesNContainer.appendChild(totalClientes)
+
     } catch (error) {
-        console.log("error detectado")
-        renderizado = usuarioError
-        
-    } finally{
-        document.body.innerHTML = renderizado
+        console.error("Error al obtener usuarios:", error)
+
+
+        Swal.fire({
+            title: 'Error!',
+            text: 'No se puede leer la lista de clientes nuevos',
+            icon: 'error',
+            confirmButtonText: 'Entendido'
+        })
     }
 }
 
 obtenerUsuarios()
-
-
-
