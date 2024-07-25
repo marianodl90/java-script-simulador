@@ -72,6 +72,7 @@ function agregarListaDeudores(data) {
                         stopOnFocus: true,
                         style: {
                             background: "linear-gradient(to right, #af6b36, grey)",
+                            
                         },
                         onClick: function () { }
                     })

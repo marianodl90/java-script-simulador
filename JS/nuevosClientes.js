@@ -1,4 +1,3 @@
-
 const clientesNContainer = document.getElementById("nuevosClientes-container")
 
 const obtenerUsuarios = async () => {
@@ -21,7 +20,9 @@ const obtenerUsuarios = async () => {
             </div>
                 <br>`
             clientesNContainer.appendChild(card)
-        });
+        })
+    
+
 
         const totalClientes = document.createElement("div")
         totalClientes.innerHTML = `
